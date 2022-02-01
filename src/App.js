@@ -3,6 +3,7 @@ import axios from "axios";
 
 import AddLotForm from "./AddLotForm";
 import LotList from "./LotList";
+import NavBar from "./NavBar";
 
 function App() {
   const [currentLots, setCurrentLots] = useState([]);
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div>
+      <NavBar />
       <AddLotForm handleClick={handleAddNew} />
       <LotList lots={currentLots} />
     </div>

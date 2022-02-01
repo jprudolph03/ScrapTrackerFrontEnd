@@ -14,9 +14,12 @@ function App() {
     axios
       .post("https://scrap-tracker.herokuapp.com/api/lot", {
         num: e.target[0].value,
+        totalCoilWeight: e.target[1].value,
+        STDLoss: e.target[2].value,
+        singlePartWeight: e.target[3].value,
       })
       .then(function (res) {
-        console.log(res);
+        console.log("Added Success");
       })
       .catch(function (error) {
         console.log(error);
